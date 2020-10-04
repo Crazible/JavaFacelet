@@ -1,0 +1,85 @@
+/** Fonts **/
+@import
+url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+/** Base styles **/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    top: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.container {
+    width: 90%;
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.sticky {
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.left-sided {
+    float: left;
+}
+.right-sided {
+    float: right;
+}
+.flexed {
+    display: flex;
+    align-items: center;
+}
+.invisible {
+    visibility: hidden;
+}
+
+/** Header styles **/
+#header {
+    height: 60px;
+    background-color: #24292e;
+    margin-bottom: 20px;
+}
+
+/** Footer styles **/
+#footer {
+    width: 100%;
+    bottom: 0;
+}
+#footer .container {
+    border-top: 1px solid #dbdbdb;
+}
+.footer-inner {
+    margin: 22px 2px 26px 2px;
+    text-align: center;
+}
+.footer-inner a {
+    margin-top: -5px;
+    position: absolute;
+    text-decoration: none;
+}
+.footer-inner a img {
+    width: 40px;
+}
+.footer-inner a span {
+    padding: 2px 4px;
+    color: #2121d3;
+}
+.footer-inner a span:hover {
+    text-decoration: underline;
+}
+#copyright {
+
+}

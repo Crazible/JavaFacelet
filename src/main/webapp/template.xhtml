@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Crazy
+  Date: 10/4/2020
+  Time: 12:39 AM
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view>
+
+      <h:head>
+            <!-- Title of pagebar -->
+            <title>Java Facelet</title>
+            <!-- Icon of the pagebar -->
+            <link rel="icon" href="${resource['png/logo-of-duck.png']}"/>
+            <!-- Stylesheets -->
+            <h:outputStylesheet library="css" name="core-styles.css"/>
+            <!-- Additional libraries -->
+            <ui:insert name="head">
+                  Metatags...
+            </ui:insert>
+      </h:head>
+
+      <h:body>
+            <!-- Header -->
+            <div id="header">
+                  <div class="container">
+                        <!-- TODO -->
+                  </div>
+            </div>
+            <!-- Content -->
+            <div id="content">
+                  <ui:insert name="content">
+                        Content...
+                  </ui:insert>
+            </div>
+            <!-- Footer -->
+            <div id="footer">
+                  <div class="container">
+                        <div class="footer-inner">
+                              <a class="itmo-logo flexed left-sided" href="https://ifmo.ru/">
+                                    <img src="resources/png/logo-of-itmo.png" alt="itmo"/>
+                                    <span>ITMO University</span>
+                              </a>
+                              <span id="copyright">
+                                    Copyright © 2020, Crazy
+                              </span>
+                        </div>
+                  </div>
+            </div>
+      </h:body>
+
+      <!-- Scripts -->
+      <ui:insert name="scripts">
+            Scripts...
+      </ui:insert>
+
+</f:view>
+
+</html>
