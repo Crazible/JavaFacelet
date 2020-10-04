@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" version="1.1">
+      <!-- Clock - first time -->
+      <line x1="15" y1="15" x2="15" y2="6" stroke-width="2" stroke="#24292e"/>
+      <circle cx="15" cy="15" r="1" fill="#24292e"/>
+      <circle cx="15" cy="6" r="1" fill="#24292e"/>
+      <circle cx="15" cy="15" r="12" stroke-width="2" stroke="#24292e" fill="none"/>
+</svg>
