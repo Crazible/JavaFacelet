@@ -45,6 +45,9 @@ body {
 .invisible {
     visibility: hidden;
 }
+.align-centered {
+    text-align: center;
+}
 
 /** Header styles **/
 #header {

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Crazy
+  Date: 10/4/2020
+  Time: 12:50 AM
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="template.xhtml">
+
+      <ui:define name="head">
+            <!-- Stylesheet -->
+            <h:outputStylesheet library="css" name="home-styles.css"/>
+            <!-- Additional libraries -->
+            <ui:define name="head"/>
+      </ui:define>
+
+      <ui:define name="content">
+            <!-- Navigation bar -->
+            <div id="navbar">
+                  <div class="container">
+                        <div class="navbar-inner flexed">
+                              <div class="ui-clock flexed invisible">
+                                    <div class="clock-icons">
+                                          <img class="invisible" src="resources/svg/icon-of-clock(1).svg" alt="clock-icon"/>
+                                          <img class="invisible" src="resources/svg/icon-of-clock(2).svg" alt="clock-icon"/>
+                                          <img class="invisible" src="resources/svg/icon-of-clock(3).svg" alt="clock-icon"/>
+                                          <img class="invisible" src="resources/svg/icon-of-clock(4).svg" alt="clock-icon"/>
+                                    </div>
+                                    <span class="clock">00:00:00</span>
+                              </div>
+                              <h:form styleClass="navigation flexed">
+                                    <div class="menu non-selected">
+                                          <h:commandLink styleClass="link flexed" action="#{navigationBean.moveGraphPage}">
+                                                <img src="resources/svg/icon-of-graph.svg" alt="graph-icon"/>
+                                                <span>Graph</span>
+                                          </h:commandLink>
+                                    </div>
+                                    <div class="menu non-selected">
+                                          <h:commandLink styleClass="link flexed" action="#{navigationBean.moveTablePage}">
+                                                <img src="resources/svg/icon-of-table.svg" alt="table-icon"/>
+                                                <span>Table</span>
+                                          </h:commandLink>
+                                    </div>
+                              </h:form>
+                        </div>
+                  </div>
+            </div>
+            <!-- Main section -->
+            <div id="main">
+                  <div class="container">
+                        <div class="main-inner">
+                              <div class="left-menu">
+                                    <div id="clock" class="ui-clock align-centered">
+                                          <span class="clock">00:00:00</span>
+                                    </div>
+                              </div>
+                              <div class="">
+                                    <ui:insert name="body">
+                                          Body...
+                                    </ui:insert>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </ui:define>
+
+      <!-- Scripts -->
+      <ui:define name="scripts">
+            <h:outputScript library="js" name="clock.js"/>
+            <h:outputScript library="js" name="scrolling.js"/>
+            <!-- Additional scripts -->
+            <ui:define name="scripts"/>
+      </ui:define>
+
+</ui:composition>
+
+</html>
