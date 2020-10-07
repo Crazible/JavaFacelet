@@ -1,0 +1,51 @@
+
+/** Header styles **/
+
+.header {
+    height: 60px;
+    background-color: #24292e;
+}
+.header-inner {
+    height: 60px;
+}
+.home {
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+.home img {
+    width: 28px;
+    padding: 2px 2px 2px 2px;
+    position: absolute;
+}
+.home span {
+    padding: 8px 2px 2px 30px;
+    font-family: Fredoka One, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.home:hover img, .home:hover span {
+    filter: opacity(92%);
+}
+.project {
+    margin-left: auto;
+    padding-top: 2px;
+}
+.project a {
+    text-decoration: none;
+    color: white;
+    padding: 2px 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: 200ms;
+}
+.project a img {
+    width: 18px;
+    margin-right: 4px;
+}
+.project span {
+    padding-bottom: 2px;
+}
+.project a:hover {
+    background-color: #30353b;
+}

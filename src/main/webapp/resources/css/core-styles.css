@@ -1,0 +1,50 @@
+
+/** Core styles **/
+
+@import
+url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body {
+    width: 100%;
+    top: 0;
+    font-family: Segoe UI, Arial, sans-serif;
+    font-size: 14px;
+}
+.container {
+    width: 90%;
+    min-width: 900px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.sticky {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #fafaff;
+}
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.left-sided {
+    float: left;
+}
+.right-sided {
+    float: right;
+}
+.flexed {
+    display: flex;
+    align-items: center;
+}
+.invisible {
+    visibility: hidden;
+}
+.align-centered {
+    text-align: center;
+}
