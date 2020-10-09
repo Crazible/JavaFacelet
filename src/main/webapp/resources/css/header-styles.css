@@ -59,7 +59,7 @@
 .scroll-menu:hover {
     width: 200px;
     height: 28px;
-    background-color: #f6f8fa;
+    background-color: #f1f8ff;
     border-radius: 8px 8px 0 0;
     padding: 2px 6px;
     border: 1px solid #dbdbdb;
@@ -78,9 +78,13 @@
 }
 .account {
     padding: 6px 0;
+    background-color: #fcfdfd;
 }
 .account:nth-child(1) {
     border-bottom: 1px solid #dbdbdb;
+}
+.account:nth-child(2) {
+    border-radius: 0 0 8px 8px;
 }
 .account >* {
     padding: 4px 16px;
@@ -108,12 +112,11 @@
     transition: 200ms;
 }
 .project a img {
-    width: 16px;
+    width: 18px;
     margin-right: 4px;
 }
 .project span {
     padding-bottom: 2px;
-    font-size: 12px;
 }
 .project a:hover {
     background-color: #30353b;

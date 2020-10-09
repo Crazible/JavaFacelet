@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Crazy
+  Date: 10/7/2020
+  Time: 2:45 PM
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+      <title>Home</title>
+      <link rel="icon" href="#{resource['png/logo-of-duck.png']}"/>
+
+      <!-- Styles Sheets -->
+      <h:outputStylesheet library="css" name="core-styles.css"/>
+      <h:outputStylesheet library="css" name="header-styles.css"/>
+      <h:outputStylesheet library="css" name="welcome-styles.css"/>
+
+</h:head>
+
+<h:body styleClass="body">
+
+      <ui:include src="/header.xhtml"/>
+      <ui:include src="/welcome.xhtml"/>
+      <ui:include src="footer.xhtml"/>
+
+</h:body>
+
+</html>

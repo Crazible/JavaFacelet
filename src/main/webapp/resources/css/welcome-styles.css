@@ -1,0 +1,67 @@
+
+/** Welcome styles **/
+
+.body {
+    background-color: #fcfdfd;
+}
+.content {
+    padding: 2px 0 32px 0;
+}
+/*.content .container, .footer .container {*/
+/*    max-width: 960px;*/
+/*}*/
+.content-inner {
+    height: 420px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.page-label {
+    height: 52px;
+    border-radius: 8px 8px 0 0;
+    background-color: #f1f8ff;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 36px;
+}
+.navigator {
+    color: #24292e;
+    padding: 26px 10px;
+}
+.navigator > span {
+    font-size: 32px;
+    transform: scaleY(1.1);
+    font-weight: 500;
+}
+.navigator p {
+    color: #586069;
+    font-size: 16px;
+    margin-top: 12px;
+}
+.go2main {
+    padding: 22px 0;
+}
+.go2main a {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 18px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    transition: 200ms;
+}
+.go2main a:hover {
+    color: #fff;
+    background-color: #1074e7;
+    border: 1px solid #1074e7;
+}
+.go2main a:active {
+    background-color: #0366d6;
+}
+.ui-clock {
+    padding: 10px
+}
+.ui-clock span {
+    color: #b3b3b3;
+    font-family: Mono, Verdana, sans-serif;
+    font-size: 42px;
+}

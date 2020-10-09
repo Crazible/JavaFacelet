@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Crazy
+  Date: 10/7/2020
+  Time: 10:24 PM
+-->
+
+<!-- WELCOME -->
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+      <section class="content">
+            <div class="container">
+                  <div class="content-inner">
+                        <div class="page-label flexed">
+
+                        </div>
+                        <div class="navigator align-centered">
+                              <span>Welcome</span>
+                              <p>Go to the main page to check if a point hits the area or not</p>
+                              <!-- Link to main page -->
+                              <h:form styleClass="go2main">
+                                    <h:commandLink action="#{navigationBean.moveToMain}">
+                                          <span>Go to main page</span>
+                                    </h:commandLink>
+                              </h:form>
+                        </div>
+                        <!-- Clock -->
+                        <div class="ui-clock align-centered">
+                              <span class="clock">00:00:00</span>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <h:outputScript library="js" name="clock.js"/>
+</ui:composition>
