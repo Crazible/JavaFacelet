@@ -33,6 +33,13 @@
                   <artifactId>eclipselink</artifactId>
                   <version>3.0.0-M1</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.icefaces/icefaces -->
+            <dependency>
+                  <groupId>org.icefaces</groupId>
+                  <artifactId>icefaces</artifactId>
+                  <version>3.3.0</version>
+            </dependency>
+
       </dependencies>
 
       <build>
