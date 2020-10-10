@@ -15,25 +15,38 @@
       </properties>
 
       <dependencies>
-            <!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-api -->
+
             <dependency>
                   <groupId>com.sun.faces</groupId>
                   <artifactId>jsf-api</artifactId>
                   <version>2.2.20</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-impl -->
+
             <dependency>
                   <groupId>com.sun.faces</groupId>
                   <artifactId>jsf-impl</artifactId>
                   <version>2.2.20</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
-            <dependency>
-                  <groupId>org.eclipse.persistence</groupId>
-                  <artifactId>eclipselink</artifactId>
-                  <version>3.0.0-M1</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.icefaces/icefaces -->
+
+          <dependency>
+              <groupId>org.eclipse.persistence</groupId>
+              <artifactId>eclipselink</artifactId>
+              <version>2.7.5</version>
+              <scope>compile</scope>
+          </dependency>
+
+          <dependency>
+              <groupId>com.oracle.ojdbc</groupId>
+              <artifactId>ojdbc8</artifactId>
+              <version>19.3.0.0</version>
+          </dependency>
+
+          <dependency>
+              <groupId>org.eclipse.persistence</groupId>
+              <artifactId>javax.persistence</artifactId>
+              <version>2.2.1</version>
+          </dependency>
+
             <dependency>
                   <groupId>org.icefaces</groupId>
                   <artifactId>icefaces</artifactId>
