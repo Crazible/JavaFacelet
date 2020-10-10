@@ -16,6 +16,12 @@
 
       <dependencies>
 
+          <dependency>
+              <groupId>javax.transaction</groupId>
+              <artifactId>jta</artifactId>
+              <version>1.1</version>
+          </dependency>
+
             <dependency>
                   <groupId>com.sun.faces</groupId>
                   <artifactId>jsf-api</artifactId>
@@ -47,11 +53,16 @@
               <version>2.2.1</version>
           </dependency>
 
-            <dependency>
-                  <groupId>org.icefaces</groupId>
-                  <artifactId>icefaces</artifactId>
-                  <version>3.3.0</version>
-            </dependency>
+          <dependency>
+              <groupId>org.icefaces</groupId>
+              <artifactId>icefaces</artifactId>
+              <version>4.2.0</version>
+          </dependency>
+          <dependency>
+              <groupId>org.icefaces</groupId>
+              <artifactId>icefaces-ace</artifactId>
+              <version>4.2.0</version>
+          </dependency>
 
       </dependencies>
 

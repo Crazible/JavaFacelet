@@ -1,19 +1,27 @@
 package ru.itmo.web.model;
 
-import java.io.Serializable;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
 
-public class Point implements Serializable {
+@Entity
+@Table(name = "points")
+public class Point {
 
-    private final double x;
-    private final double y;
-    private final double r;
-    private final boolean hit;
-    private final String currentTime;
-    private final Double executionTime;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
+
+    private double x;
+    private double y;
+    private double r;
+    private boolean hit;
+    private String currentTime;
+    private Double executionTime;
+
+    public Point() {}
 
     public Point(double x, double y, double r){
         this.x = x;
@@ -54,6 +62,13 @@ public class Point implements Serializable {
         return executionTime;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     private boolean checkArea(double x, double y, double r){
         // Checks triangle area
