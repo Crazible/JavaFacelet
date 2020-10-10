@@ -23,16 +23,16 @@
     border-bottom: 1px solid #dbdbdb;
     margin-bottom: 36px;
 }
-.navigator {
+.intro-field {
     color: #24292e;
     padding: 26px 10px;
 }
-.navigator > span {
+.intro-field > span {
     font-size: 32px;
     transform: scaleY(1.1);
     font-weight: 500;
 }
-.navigator p {
+.intro-field p {
     color: #586069;
     font-size: 16px;
     margin-top: 12px;
