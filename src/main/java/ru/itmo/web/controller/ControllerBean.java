@@ -1,16 +1,10 @@
 package ru.itmo.web.controller;
 
-import oracle.ucp.common.FailoverStats;
-import ru.itmo.web.model.Point;
-
-import javax.annotation.PostConstruct;
 import javax.faces.bean.*;
 import javax.persistence.*;
+import java.util.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import ru.itmo.web.model.Point;
 
 @ManagedBean
 @SessionScoped
