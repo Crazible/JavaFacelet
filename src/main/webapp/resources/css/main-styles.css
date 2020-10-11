@@ -1,0 +1,112 @@
+
+/** Content styles **/
+
+.body {
+    background-color: #fcfdfd;
+}
+.content {
+    height: 3000px;
+}
+.sticky {
+    background-color: #f1f8ff;
+}
+.sticky + * {
+    padding-top: 50px;
+}
+.navbar {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.navbar-inner {
+    height: 50px;
+}
+.navbar-inner .ui-clock {
+    width: 296px;
+}
+.clock-icons {
+    width: 22px;
+    height: 22px;
+}
+.clock-icons img {
+    position: absolute;
+}
+.ui-clock .clock {
+    margin-left: 4px;
+    font-family: Mono, Verdana, sans-serif;
+    font-weight: 500;
+    color: #24292e;
+}
+.menu {
+    height: 50px;
+    transition: 100ms;
+}
+.menu:hover {
+    border-bottom: 2px solid #b3b3b3;
+}
+.menu button {
+    height: 48px;
+    margin-top: 0;
+    padding: 8px 16px 4px 16px;
+    background-color: inherit;
+    border: none;
+}
+.menu button:focus {
+    outline: none;
+}
+.menu button img {
+    width: 22px;
+    filter: opacity(0.4);
+}
+.menu button span {
+    font-size: 15px;
+    padding-left: 4px;
+    font-weight: 300;
+    color: #586069;
+}
+.selected, .selected:hover {
+    border-bottom: 2px solid #ef1c1c;
+}
+.selected button img {
+    filter: opacity(0.8);
+}
+.selected button span {
+    font-weight: 500;
+    color: #000000;
+}
+.main-inner {
+    display: flex;
+}
+.left-column {
+    width: 296px;
+    height: auto;
+    padding: 0 31px 0 5px;
+}
+.left-column .ui-clock {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    border: 1px solid #dbdbdb;
+    border-radius: 130px;
+    margin-top: -36px;
+    background-color: #fcfdfd;
+    padding: 112px 0;
+    font-size: 36px;
+}
+.left-column .clock {
+    color: #b3b3b3;
+}
+
+.graph {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb;
+    display: block;
+}
+.graph svg text {
+    color: #30353b;
+    font-family: Mono, Verdana, sans-serif;
+    font-size: 10px;
+    stroke-width: 1;
+}
+
