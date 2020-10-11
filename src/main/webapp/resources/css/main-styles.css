@@ -5,7 +5,7 @@
     background-color: #fcfdfd;
 }
 .content {
-    height: 3000px;
+    height: 1500px;
 }
 .sticky {
     background-color: #f1f8ff;
@@ -110,3 +110,14 @@
     stroke-width: 1;
 }
 
+
+
+.footer-inner {
+    text-align: left!important;
+}
+.footer-inner span#copyright {
+    margin-left: 296px!important;
+}
+.footer-inner span#creators {
+    visibility: visible!important;
+}

@@ -1,0 +1,32 @@
+
+/** Footer **/
+
+.footer .container {
+    border-top: 1px solid #dbdbdb;
+}
+.footer-inner {
+    padding: 24px 0 28px 0;
+    text-align: center;
+}
+.footer-inner span#copyright {
+    color: #30353b;
+    font-weight: 500;
+}
+.footer-inner span a {
+    color: #1074e7;
+    text-decoration: none;
+}
+.footer-inner span a:hover {
+    color: #0366d6;
+    text-decoration: underline;
+}
+.footer-inner span a:active {
+    color: #1074e7;
+}
+.footer-inner span#creators {
+    color: #8a8a8a;
+    padding-left: 320px;
+    position: absolute;
+    margin-left: auto;
+    visibility: hidden;
+}
