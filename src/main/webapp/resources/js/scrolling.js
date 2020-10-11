@@ -14,6 +14,18 @@ window.addEventListener('scroll', function () {
     }
 })
 
+const clockUI = document.querySelector('.navbar-inner .ui-clock');
+const clockCircle = document.querySelector('#clock');
+
+// Setting listener for clock ui
+window.addEventListener('scroll', function () {
+    if (clockCircle.getBoundingClientRect().bottom < 0) {
+        clockUI.classList.remove('invisible');
+    } else {
+        clockUI.classList.add('invisible');
+    }
+})
+
 
 // Getting array of clock icons
 const clockIcons = document.querySelectorAll('.clock-icons img');

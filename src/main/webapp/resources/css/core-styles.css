@@ -17,8 +17,8 @@ url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 }
 .container {
     width: 90%;
-    min-width: 900px;
-    max-width: 1200px;
+    min-width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
 }
 .sticky {

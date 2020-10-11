@@ -39,7 +39,7 @@
 }
 .menu {
     height: 50px;
-    transition: 100ms;
+    transition: 50ms;
 }
 .menu:hover {
     border-bottom: 2px solid #b3b3b3;
@@ -90,25 +90,30 @@
     border-radius: 130px;
     margin-top: -36px;
     background-color: #fcfdfd;
-    padding: 112px 0;
+    padding: 108px 0;
     font-size: 36px;
 }
 .left-column .clock {
     color: #b3b3b3;
 }
-
+.graph-field {
+    padding: 18px 0;
+}
 .graph {
     padding: 8px;
     border-radius: 8px;
     border: 1px solid #dbdbdb;
     display: block;
+    background-color: white;
 }
 .graph svg text {
-    color: #30353b;
     font-family: Mono, Verdana, sans-serif;
     font-size: 10px;
     stroke-width: 1;
 }
+
+
+
 
 
 

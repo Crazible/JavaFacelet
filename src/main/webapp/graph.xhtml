@@ -9,13 +9,12 @@
 <!-- GRAPH -->
 
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:ui="http://java.sun.com/jsf/facelets">
+                xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:ace="http://www.icefaces.org/icefaces/components">
 
-      <div class="graph-field">
-            <span>Craph field</span>
+      <div class="graph-field flexed">
             <div class="graph">
                   <svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350"
-                       stroke-width="2" stroke="#24292e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                       stroke-width="1" stroke="#24292e" fill="24292e" stroke-linecap="round" stroke-linejoin="round">
                         <!-- Areas -->
                         <path d="M175 175 L175 45 240 175 Z" stroke="none" fill="#a3c8e8"/>
                         <path d="M175 175 L305 175 305 240 175 240 Z" stroke="none" fill="#a3c8e8"/>
@@ -28,8 +27,31 @@
                         <text x="100" y="168">-R/2</text> <text x="181" y="111">R/2</text>
                         <text x="232" y="168">R/2</text> <text x="181" y="243">-R/2</text>
                         <text x="302" y="170">R</text> <text x="181" y="308">-R</text>
-
                   </svg>
+            </div>
+            <div class="request-field">
+                  <h:form>
+                        <div class="field-x">
+                              <label for="x">X</label>
+                              <ace:sliderEntry id="x" min="-5" max="5" stepPercent="10"/>
+                        </div>
+                        <div class="field-x">
+                              <label for="y"></label>
+                              <h:inputText id="y">
+
+                              </h:inputText>
+                        </div>
+                        <div class="field-r">
+                              <label for="r"></label>
+                              <h:panelGrid id="r">
+                                    <h:selectBooleanCheckbox />
+                                    <h:selectBooleanCheckbox />
+                                    <h:selectBooleanCheckbox />
+                                    <h:selectBooleanCheckbox />
+                                    <h:selectBooleanCheckbox />
+                              </h:panelGrid>
+                        </div>
+                  </h:form>
             </div>
       </div>
 </ui:composition>

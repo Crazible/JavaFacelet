@@ -5,7 +5,7 @@
     border-top: 1px solid #dbdbdb;
 }
 .footer-inner {
-    padding: 24px 0 28px 0;
+    padding: 24px 0 32px 0;
     text-align: center;
 }
 .footer-inner span#copyright {
@@ -25,7 +25,7 @@
 }
 .footer-inner span#creators {
     color: #8a8a8a;
-    padding-left: 320px;
+    right: 10%;
     position: absolute;
     margin-left: auto;
     visibility: hidden;

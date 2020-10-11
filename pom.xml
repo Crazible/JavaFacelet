@@ -58,6 +58,7 @@
               <artifactId>icefaces</artifactId>
               <version>4.2.0</version>
           </dependency>
+
           <dependency>
               <groupId>org.icefaces</groupId>
               <artifactId>icefaces-ace</artifactId>
