@@ -78,6 +78,7 @@ public class ControllerBean implements Serializable {
         EntityManager em = entityManagerFactory.createEntityManager();
         List<Point> points = (List<Point>) em.createQuery("SELECT p from Point p").getResultList();
         Collections.sort(points, Comparator.comparingLong(Point::getId));
+        Collections.reverse(points);
         return points;
     }
 

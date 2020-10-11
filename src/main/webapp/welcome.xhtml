@@ -36,34 +36,5 @@
             </div>
       </section>
       <h:outputScript library="js" name="clock.js"/>
-
-
-      <h:form>
-            <ace:dataTable var="point" value="#{controllerBean.pointList}">
-
-                  <ace:column sortBy="#{point.id}" headerText="ID">
-                        <h:outputText value="#{point.id}"/>
-                  </ace:column>
-
-                  <ace:column sortBy="#{point.x}" headerText="X">
-                        <h:outputText value="#{point.x}"/>
-                  </ace:column>
-
-                  <ace:column sortBy="#{point.y}" headerText="Y">
-                        <h:outputText value="#{point.y}"/>
-                  </ace:column>
-
-                  <ace:column sortBy="#{point.r}" headerText="R">
-                        <h:outputText value="#{point.r}"/>
-                  </ace:column>
-
-                  <ace:column sortBy="#{point.currentTime}" headerText="Execution Time">
-                        <h:outputText value="#{point.currentTime}" />
-                  </ace:column>
-
-                  <ace:column sortBy="#{point.hit}" headerText="Result">
-                        <h:outputText value="#{point.hit}"/>
-                  </ace:column>
-            </ace:dataTable>
-      </h:form>
+      
 </ui:composition>
