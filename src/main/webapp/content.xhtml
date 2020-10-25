@@ -26,13 +26,13 @@
                     </div>
                     <div class="flexed">
                         <div class="menu selected">
-                            <button class="flexed" onclick="">
+                            <button class="flexed" onclick="onGraph()">
                                 <img src="resources/svg/icon-of-graph.svg" alt="icon-of-graph"/>
                                 <span>Graph</span>
                             </button>
                         </div>
                         <div class="menu">
-                            <button class="flexed" onclick="">
+                            <button class="flexed" onclick="onTable()">
                                 <img src="resources/svg/icon-of-table.svg" alt="icon-of-table"/>
                                 <span>Table</span>
                             </button>
@@ -50,7 +50,8 @@
                         </div>
                     </div>
                     <div class="main-column">
-                        <ui:include src="graph.xhtml"/>
+                        <ui:include src="/graph.xhtml"/>
+                        <ui:include src="/table.xhtml"/>
                     </div>
                 </div>
             </div>
@@ -58,6 +59,6 @@
     </section>
 
     <h:outputScript library="js" name="clock.js"/>
-    <h:outputScript library="js" name="scrolling.js"/>
+    <h:outputScript library="js" name="validate.js"/>
 
 </ui:composition>

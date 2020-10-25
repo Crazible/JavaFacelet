@@ -7,33 +7,29 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ace="http://www.icefaces.org/icefaces/components">
 
-<h:form>
-    <ace:dataTable var="point" rows="5" value="#{controllerBean.pointList}">
-
-        <ace:column headerText="ID">
-            <h:outputText value="#{point.id}"/>
-        </ace:column>
-
-        <ace:column headerText="X">
-            <h:outputText value="#{point.x}"/>
-        </ace:column>
-
-        <ace:column headerText="Y">
-            <h:outputText value="#{point.y}"/>
-        </ace:column>
-
-        <ace:column headerText="R">
-            <h:outputText value="#{point.r}"/>
-        </ace:column>
-
-        <ace:column headerText="Execution Time">
-            <h:outputText value="#{point.currentTime}" />
-        </ace:column>
-
-        <ace:column headerText="Result">
-            <h:outputText value="#{point.hit}"/>
-        </ace:column>
-    </ace:dataTable>
-</h:form>
+<div class="table table-hidden" id="table">
+    <h:form>
+        <ace:dataTable var="point" value="#{controllerBean.pointList}">
+            <ace:column headerText="X">
+                <h:outputText value="#{point.x}"/>
+            </ace:column>
+            <ace:column headerText="Y">
+                <h:outputText value="#{point.y}"/>
+            </ace:column>
+            <ace:column headerText="R">
+                <h:outputText value="#{point.r}"/>
+            </ace:column>
+            <ace:column headerText="Result">
+                <h:outputText value="#{point.hit}"/>
+            </ace:column>
+            <ace:column headerText="Time">
+                <h:outputText value="#{point.currentTime}" />
+            </ace:column>
+            <ace:column headerText="Execution time">
+                <h:outputText value="#{point.executionTime}"><f:convertNumber pattern="#0.0000"/></h:outputText>
+            </ace:column>
+        </ace:dataTable>
+    </h:form>
+</div>
 
 </html>

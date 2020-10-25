@@ -9,10 +9,11 @@
 <!-- GRAPH -->
 
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:ace="http://www.icefaces.org/icefaces/components">
+                xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:ace="http://www.icefaces.org/icefaces/components"
+                xmlns:f="http://java.sun.com/jsf/core">
 
-      <div class="graph-field flexed">
-            <div class="graph">
+      <div class="graph-field">
+            <div class="graph flexed">
                   <svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350"
                        stroke-width="1" stroke="#24292e" fill="24292e" stroke-linecap="round" stroke-linejoin="round">
                         <!-- Areas -->
@@ -22,6 +23,8 @@
                         <!-- Axis -->
                         <path d="M15 175 H45 V172 178 175 H110 V172 178 175 H240 V172 178 175 H305 V172 178 175 H335 M335 175 L328 173 328 177 Z"/>
                         <path d="M175 335 V305 H172 178 175 V 240 H172 178 175 V 110 H172 178 175 V45 H172 178 175 V15 M175 15 L173 24 177 24 Z"/>
+                        <!-- Dot -->
+                        <circle id="dot" cx="175" cy="175" r="3" fill="red"/>
                         <!-- Coordinates -->
                         <text x="38" y="170">-R</text> <text x="181" y="47">R</text>
                         <text x="100" y="168">-R/2</text> <text x="181" y="111">R/2</text>
@@ -30,28 +33,67 @@
                   </svg>
             </div>
             <div class="request-field">
+                  <span id="title">Enter data of point</span>
                   <h:form>
-                        <div class="field-x">
-                              <label for="x">X</label>
-                              <ace:sliderEntry id="x" min="-5" max="5" stepPercent="10"/>
+                        <div class="field">
+                              <label for="x">X:</label>
+                              <ace:sliderEntry styleClass="x" id="x" min="-5" max="5" stepPercent="10"/>
+                              <label for="x" class="last">Choose value of X (0)</label>
                         </div>
-                        <div class="field-x">
-                              <label for="y"></label>
-                              <h:inputText id="y">
-
-                              </h:inputText>
+                        <div class="field">
+                              <label for="y">Y:</label>
+                              <h:inputText styleClass="y" id="y" maxlength="16" autocomplete="off"/>
+                              <label for="x" class="last">Enter value of Y</label>
                         </div>
-                        <div class="field-r">
-                              <label for="r"></label>
-                              <h:panelGrid id="r">
-                                    <h:selectBooleanCheckbox />
-                                    <h:selectBooleanCheckbox />
-                                    <h:selectBooleanCheckbox />
-                                    <h:selectBooleanCheckbox />
-                                    <h:selectBooleanCheckbox />
-                              </h:panelGrid>
+                        <div class="field">
+                              <label for="r">R:</label>
+                              <h:panelGroup styleClass="r" id="r">
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                          <span>1</span>
+                                    </h:selectBooleanCheckbox>
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                          <span>2</span>
+                                    </h:selectBooleanCheckbox>
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                          <span>3</span>
+                                    </h:selectBooleanCheckbox>
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                          <span>4</span>
+                                    </h:selectBooleanCheckbox>
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                          <span>5</span>
+                                    </h:selectBooleanCheckbox>
+                              </h:panelGroup>
+                              <label for="x" class="last">Choose value of R</label>
+                        </div>
+                        <div class="field">
+                              <h:commandButton styleClass="submitButton" value="Submit"/>
                         </div>
                   </h:form>
             </div>
+      </div>
+      <div class="table">
+            <h:form>
+                  <ace:dataTable var="point" rows="5" value="#{controllerBean.pointList}">
+                        <ace:column headerText="X">
+                              <h:outputText value="#{point.x}"/>
+                        </ace:column>
+                        <ace:column headerText="Y">
+                              <h:outputText value="#{point.y}"/>
+                        </ace:column>
+                        <ace:column headerText="R">
+                              <h:outputText value="#{point.r}"/>
+                        </ace:column>
+                        <ace:column headerText="Result">
+                              <h:outputText value="#{point.hit}"/>
+                        </ace:column>
+                        <ace:column headerText="Time">
+                              <h:outputText value="#{point.currentTime}" />
+                        </ace:column>
+                        <ace:column headerText="Execution time">
+                              <h:outputText value="#{point.executionTime}"><f:convertNumber pattern="#0.0000"/></h:outputText>
+                        </ace:column>
+                  </ace:dataTable>
+            </h:form>
       </div>
 </ui:composition>
