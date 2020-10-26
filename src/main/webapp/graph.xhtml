@@ -36,35 +36,35 @@
                   <span id="title">Enter data of point</span>
                   <h:form>
                         <div class="field">
-                              <label for="x">X:</label>
-                              <ace:sliderEntry styleClass="x" id="x" min="-5" max="5" stepPercent="10"/>
-                              <label for="x" class="last">Choose value of X (0)</label>
+                              <label for="mySlider">X:</label>
+                              <ace:sliderEntry styleClass="x" id="mySlider" min="-5" max="5" stepPercent="10" onSlideEnd="checkSlider()"/>
+                              <label for="mySlider" class="last">Choose value of X (0)</label>
                         </div>
                         <div class="field">
                               <label for="y">Y:</label>
-                              <h:inputText styleClass="y" id="y" maxlength="16" autocomplete="off"/>
-                              <label for="x" class="last">Enter value of Y</label>
+                              <h:inputText styleClass="y" id="y" maxlength="16" autocomplete="off" onkeyup="checkInputText()"/>
+                              <label for="mySlider" class="last">Enter value of Y [-5..3]</label>
                         </div>
                         <div class="field">
                               <label for="r">R:</label>
                               <h:panelGroup styleClass="r" id="r">
-                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox" onclick="check(this, 1)">
                                           <span>1</span>
                                     </h:selectBooleanCheckbox>
-                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox" onclick="check(this, 2)">
                                           <span>2</span>
                                     </h:selectBooleanCheckbox>
-                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox" onclick="check(this, 3)">
                                           <span>3</span>
                                     </h:selectBooleanCheckbox>
-                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox" onclick="check(this, 4)">
                                           <span>4</span>
                                     </h:selectBooleanCheckbox>
-                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox">
+                                    <h:selectBooleanCheckbox class="zaebaletotcheckbox" onclick="check(this, 5)">
                                           <span>5</span>
                                     </h:selectBooleanCheckbox>
                               </h:panelGroup>
-                              <label for="x" class="last">Choose value of R</label>
+                              <label for="mySlider" class="last">Choose value of R</label>
                         </div>
                         <div class="field">
                               <h:commandButton styleClass="submitButton" value="Submit"/>

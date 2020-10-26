@@ -44,6 +44,76 @@ setInterval(iconHandler, timeout);
 
 ///////////////////////////////////////////////////////////////////////////
 
+// Overriding method 'replace' of the class DOMTokenList
+DOMTokenList.prototype.replace = function (oldToken, newToken) {
+    this.remove(oldToken); this.add(newToken);
+}
+
+const success = "success";
+const error = "error";
+
+//-------------------------------------------------------------------------
+
+const labelList = document.querySelectorAll('label.last');
+
+const sliderEntry = ice.ace.instance('j_idt19:mySlider');
+
+const checkSlider = function() {
+    labelList[0].classList.add(success);
+    labelList[0].innerHTML = sliderEntry.getValue();
+    return Number.parseFloat(sliderEntry.getValue());
+}
+
+//-------------------------------------------------------------------------
+
+const inputText = document.querySelector('.y');
+
+const checkInputText = function() {
+    let floatPattern = /^[+-]?\d+(\.\d+)?$/;
+    // replace comma to dot
+    let fieldValue = inputText.value.trim().replace(',', '.');
+
+    if (fieldValue === "") {
+        // removes all effects
+        labelList[1].classList.remove(success, error);
+        labelList[1].innerHTML = 'Enter value of Y [-5..3]'
+        return undefined; // if invalid data
+    }
+    if (floatPattern.test(fieldValue)) {
+        let floatValue = parseFloat(fieldValue);
+
+        if (floatValue < -5 || floatValue > 3) {
+            // replacing status
+            labelList[1].classList.replace(success, error);
+            labelList[1].innerHTML = fieldValue.toString();
+            return undefined; // if invalid data
+        } else {
+            // replacing status
+            labelList[1].classList.replace(error, success);
+            labelList[1].innerHTML = fieldValue.toString();
+            return floatValue; // valid data
+        }
+    } else {
+        // replacing status
+        labelList[1].classList.replace(success, error);
+        labelList[1].innerHTML = fieldValue.toString();
+        return undefined; // if invalid data
+    }
+}
+
+//-------------------------------------------------------------------------
+
+const checkBoxList = document.querySelectorAll('.zaebaletotcheckbox');
+
+const check = function(checkBox, val) {
+    checkBoxList.forEach(checkbox => checkbox.checked = false);
+    checkBox.checked = true;
+    labelList[2].classList.add(success);
+    labelList[2].innerHTML = val.toString();
+}
+
+///////////////////////////////////////////////////////////////////////////
+
 const point = document.querySelector('#dot');
 const graphic = document.querySelector('#graphic');
 

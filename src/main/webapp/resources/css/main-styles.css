@@ -166,7 +166,7 @@
 .r span:nth-child(1) {
     padding-left: 0;
 }
-label.last {
+.last {
     width: 256px;
     padding: 3px 8px;
     border-radius: 6px;
@@ -232,8 +232,12 @@ label.last {
 }
 
 .success {
-    background-color: #84c193;
+    background-color: #a5deb4;
+    color: #126d2b;
+    font-weight: 600;
 }
 .error {
-    background-color: #c18484;
+    background-color: #dea5a5;
+    color: #6d1212;
+    font-weight: 600;
 }
