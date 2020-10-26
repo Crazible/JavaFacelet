@@ -41,3 +41,38 @@ const iconHandler = function () {
 // Starts timer
 iconHandler();
 setInterval(iconHandler, timeout);
+
+///////////////////////////////////////////////////////////////////////////
+
+const point = document.querySelector('#dot');
+const graphic = document.querySelector('#graphic');
+
+let x = 175, y = 175;
+const onChangeRedrawDot = function () {
+    
+}
+
+// redraws the point on the graph
+const redrawPoint = function (x, y) {
+    point.setAttribute("cx", x);
+    point.setAttribute("cy", y);
+}
+// rolls point to another point
+graphic.addEventListener("mousemove", (event) => {
+    const coordinate = graphic.getBoundingClientRect();
+    // coordinates
+    const cx = event.clientX - coordinate.x;
+    const cy = event.clientY - coordinate.y;
+
+    redrawPoint(cx, cy);
+})
+// moves dot to pre-clicked point
+graphic.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+        redrawPoint(x, y);
+    }, 50);
+})
+
+graphic.addEventListener("click", () => {
+    
+})

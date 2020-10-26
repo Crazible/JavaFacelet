@@ -14,7 +14,7 @@
 
       <div class="graph-field">
             <div class="graph flexed">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350"
+                  <svg id="graphic" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350"
                        stroke-width="1" stroke="#24292e" fill="24292e" stroke-linecap="round" stroke-linejoin="round">
                         <!-- Areas -->
                         <path d="M175 175 L175 45 240 175 Z" stroke="none" fill="#a3c8e8"/>
@@ -24,7 +24,7 @@
                         <path d="M15 175 H45 V172 178 175 H110 V172 178 175 H240 V172 178 175 H305 V172 178 175 H335 M335 175 L328 173 328 177 Z"/>
                         <path d="M175 335 V305 H172 178 175 V 240 H172 178 175 V 110 H172 178 175 V45 H172 178 175 V15 M175 15 L173 24 177 24 Z"/>
                         <!-- Dot -->
-                        <circle id="dot" cx="175" cy="175" r="3" fill="red"/>
+                        <circle id="dot" cx="175" cy="175" r="3" fill="red" stroke="none"/>
                         <!-- Coordinates -->
                         <text x="38" y="170">-R</text> <text x="181" y="47">R</text>
                         <text x="100" y="168">-R/2</text> <text x="181" y="111">R/2</text>
@@ -91,7 +91,7 @@
                               <h:outputText value="#{point.currentTime}" />
                         </ace:column>
                         <ace:column headerText="Execution time">
-                              <h:outputText value="#{point.executionTime}"><f:convertNumber pattern="#0.0000"/></h:outputText>
+                              <h:outputText value="#{point.executionTime}"><f:convertNumber pattern="#0.000000"/></h:outputText>
                         </ace:column>
                   </ace:dataTable>
             </h:form>

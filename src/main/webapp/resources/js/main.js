@@ -14,6 +14,7 @@ const onGraph = function() {
     menuList[1].classList.remove(selected);
     graph.classList.remove(graph_hidden);
     table.classList.add(table_hidden);
+    window.scrollTo(0, 0);
 }
 
 const onTable = function() {
@@ -21,4 +22,5 @@ const onTable = function() {
     menuList[1].classList.add(selected);
     graph.classList.add(graph_hidden);
     table.classList.remove(table_hidden);
+    window.scrollTo(0, 0);
 }
