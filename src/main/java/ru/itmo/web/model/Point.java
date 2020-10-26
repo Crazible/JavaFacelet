@@ -72,11 +72,11 @@ public class Point {
 
     private boolean checkArea(double x, double y, double r){
         // Checks triangle area
-        if (x >= 0 && y >= 0 && y <= -2 * x + r) {
+        if (x >= 0 && y <= 0 && y >= x / 2 - r / 2) {
             return true;
         }
         // Checks rectangle area
-        if (x >= 0 && y <= 0 && x <= r && y >= - r / 2) {
+        if (x <= 0 && y >= 0 && x >= - r / 2 && y <= r) {
             return true;
         }
         // Checks 1/4 circle area
