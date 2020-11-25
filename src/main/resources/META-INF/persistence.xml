@@ -11,8 +11,8 @@
         <properties>
             <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:orbis" />
-            <property name="javax.persistence.jdbc.user" value="s289136" />
-            <property name="javax.persistence.jdbc.password" value="fbb581" />
+            <property name="javax.persistence.jdbc.user" value="****" />
+            <property name="javax.persistence.jdbc.password" value="****" />
 
             <property name="eclipselink.logging.level" value="FINEST"/>
             <property name="eclipselink.ddl-generation" value="create-tables" />
